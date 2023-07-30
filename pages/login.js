@@ -18,18 +18,14 @@ exports.LoginPage = class LoginPage { //export yapmadan diğer file lardan buray
         await this.login_button.clickOnLogin()
         }
      */
-    async gotoLoginPage(){
+    async gotoLoginPage() {
         await this.page.goto('https://the-internet.herokuapp.com/login');
     }
-    async login(username, password){
+    async login(username, password) {
         //login methoduna variable atadık ve böylece hard coding values yerine (isim ve password)
         // kodun reusable olmasını sağladık.
         await this.username_textbox.fill(username)
-        await this.password_textbox.fill(password )
+        await this.password_textbox.fill(password)
         await this.login_button.click()
     }
-
-    
-
-
 }
